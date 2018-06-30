@@ -23,3 +23,11 @@ void entidade::debitarMana(int valor)
 	else
 		Mana=0;
 }
+void entidade::setHP(int valor)
+{
+	HP=valor;
+}
+void entidade::setMana(int valor)
+{
+	Mana=valor;
+}

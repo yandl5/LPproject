@@ -21,7 +21,7 @@ int viking::furiaImplacavel(int valor)
 	{
 		cout<<"O viking usa o peso do seu corpo sem se preocupar com nada, e causa dano ao monstro!"<<endl;
 		this->debitarHP(30);
-		return (this->getValorAtaque()*2);
+		return (this->realizarDano(valor)*2);
 	}
 	else
 		cout<<"O viking não tem forças para esse golpe, ele hesita e dispara um ataque normal"<<endl;

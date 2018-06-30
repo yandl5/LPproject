@@ -19,5 +19,7 @@ public:
 	int getMana();
 	void debitarHP(int valor);
 	void debitarMana(int valor);
+	void setHP(int valor);
+	void setMana(int valor);
 };
 #endif

@@ -5,6 +5,7 @@
 #include "esquiva.h"
 #include "esqueleto.h"
 #include "viking.h"
+#include "paladino.h"
 using namespace std;
 int main()
 {
@@ -28,3 +29,4 @@ int main()
 	}
 	return 0;
 }
+//g++ -Wall -pedantic -std=c++11 -o tt -O0 ataque.cpp bloqueio.cpp dado.cpp esquiva.cpp entidade.cpp esqueleto.cpp viking.cpp main.cpp
