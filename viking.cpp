@@ -64,3 +64,7 @@ int viking::controleAtaque(string valor,int armFisica,int HP)
 	}
 	return dano;
 }
+string viking::getNome()
+{
+	return Nome;
+}

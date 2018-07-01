@@ -6,6 +6,7 @@ paladino::~paladino(){}
 void paladino::meditar()
 {
 	int mana=50,hp=30;
+
 	if((this->getMana()+mana)<=MAXSP)
 	{
 		this->setMana(this->getMana()+mana);
@@ -16,7 +17,7 @@ void paladino::meditar()
 	}
 	if((this->getHP()+hp)<=MAXHP)
 	{
-		this->setHP(this->getHP()+HP);
+		this->setHP(this->getHP()+hp);
 	}
 	else
 	{
@@ -27,7 +28,6 @@ void paladino::meditar()
 }
 int paladino::gloriaDivina(int valor)
 {
-	int x=0;
 	if(this->getMana()>=10)
 	{
 		this->debitarMana(10);
@@ -38,6 +38,7 @@ int paladino::gloriaDivina(int valor)
 	{
 		cout<<"O paladino se ver obrigado a meditar, pois está sem energia"<<endl;
 		this->meditar();
+		return 0;
 	}
 }
 void paladino::encantarArma()
@@ -53,7 +54,7 @@ void paladino::encantarArma()
 		this->meditar();
 	}
 }
-int paladino::controleAtaque(int armRunica)
+int paladino::controleAtaque(string valor,int armRunica)
 {
 	int dano=0;
 	if(valor=="1")
@@ -69,4 +70,8 @@ int paladino::controleAtaque(int armRunica)
 		this->encantarArma();
 	}
 	return dano;
+}
+string paladino::getNome()
+{
+	return Nome;
 }

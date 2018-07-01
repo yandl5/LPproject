@@ -4,13 +4,14 @@
 class paladino:public entidade,public ataque,public bloqueio, public esquiva
 {
 private:
-	string nome;
+	string Nome;
 public:
-	paladino(string Nome);
+	paladino(string nome);
 	~paladino();
+	string getNome();
 	void meditar();
 	int gloriaDivina(int valor);
-	void encantarArma(int valor);
-	int controleAtaque(int armRunica);
+	void encantarArma();
+	int controleAtaque(string valor,int armRunica);
 };
 #endif

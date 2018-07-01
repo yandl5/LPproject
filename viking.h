@@ -8,6 +8,7 @@ private:
 public:
 	viking(string nome);
 	~viking();
+	string getNome();
 	int balancoTemerario(int valor);
 	int furiaImplacavel(int valor);
 	int avancoFinal(int valor);
