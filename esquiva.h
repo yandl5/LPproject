@@ -9,6 +9,8 @@ private:
 public:
 	esquiva(int valor);
 	~esquiva();
+	int getEsquiva();
+	void setEsquiva(int valor);
 	bool esquivar();
 };
 #endif

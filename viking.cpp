@@ -24,16 +24,18 @@ int viking::furiaImplacavel(int valor)
 		return (this->realizarDano(valor)*2);
 	}
 	else
+	{
 		cout<<"O viking não tem forças para esse golpe, ele hesita e dispara um ataque normal"<<endl;
 		return this->realizarDano(valor);
+	}
 }
-int viking::avancoFinal(int valor)
+int viking::avancoFinal(int hp,int valor)
 {
 	if(this->getHP()>150)
 	{
 		cout<<"O viking prepara um golpe letal que mata seu alvo e consome boa parte de sua vida"<<endl;
 		this->debitarHP(150);
-		return valor;
+		return hp;
 	}
 	else
 	{
@@ -47,7 +49,7 @@ int viking::controleAtaque(string valor,int armFisica,int HP)
 	int dano=0;
 	if(valor=="1")
 	{
-		cout<<"O viking ataca com um ataque simples!"<<endl;
+		cout<<"O viking ataca com um golpe simples!"<<endl;
 		dano=this->realizarDano(armFisica);
 	}
 	else if(valor=="2")
@@ -60,7 +62,7 @@ int viking::controleAtaque(string valor,int armFisica,int HP)
 	}
 	else if(valor=="4")
 	{
-		dano=this->avancoFinal(HP);
+		dano=this->avancoFinal(HP,armFisica);
 	}
 	return dano;
 }

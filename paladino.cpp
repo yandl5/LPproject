@@ -1,6 +1,7 @@
 #include "paladino.h"
 #define MAXHP 400
 #define MAXSP 200
+#define MAXatack 15
 paladino::paladino(string nome):entidade(400,200),ataque(15),bloqueio(15,30),esquiva(5), Nome(nome){}
 paladino::~paladino(){}
 void paladino::meditar()

@@ -1,8 +1,8 @@
 #include "bloqueio.h"
 bloqueio::bloqueio(int armFisica,int armRunica)
 {
-	armaduraRunica=armRunica;
 	armaduraFisica=armFisica;
+	armaduraRunica=armRunica;
 }
 bloqueio::~bloqueio(){}
 int bloqueio::getArmaduraRunica()

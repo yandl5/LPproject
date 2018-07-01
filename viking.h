@@ -11,7 +11,7 @@ public:
 	string getNome();
 	int balancoTemerario(int valor);
 	int furiaImplacavel(int valor);
-	int avancoFinal(int valor);
+	int avancoFinal(int hp,int armFisica);
 	int controleAtaque(string valor,int armFisica,int HP);
 };
 #endif
