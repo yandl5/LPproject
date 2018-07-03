@@ -1,64 +1,44 @@
 #include "esqueleto.h"
 #include <iostream>
-esqueleto::esqueleto():entidade(9000,30),ataque(5),bloqueio(1,2),esquiva(5),sorteio(6){}
+esqueleto::esqueleto():monstro(5,75,40,5,7,5,"Esqueleto",1){}
 esqueleto::~esqueleto(){}
-int esqueleto::laminaVenenosa(int valor)
+int esqueleto::skillUm(int armFisica,int armRunica,int hp)
 {
 	int x=0;
-	if(this->getMana()>=10)
+	if(this->getMAna()>=10)
 	{
-		x=this->realizarDano(valor);
-		x=x+(this->getMana()/2);
+		x=this->Dano(armRunica);
+		x=x+(this->getMAna()/2);
 		cout<<"O esqueleto disparou sua lâmina num corte sombrio!"<<endl;
 		if(x<0)
 		{
 			x=5;
 		}
-		this->debitarMana(10);
+		this->debitarMAna(10);
 	}
 	else
 	{
-		x=this->realizarDano(valor);
+		x=this->Dano(armFisica);
 		cout<<"O esqueleto disparou um ataque simples!"<<endl;
 	}
 	return x;
 }
-void esqueleto::veuDasSombras(int valor)
+int esqueleto::skillDois(int armFisica,int armRunica,int hp)
 {
 	int x,y;
-	if(this->getMana()>=15)
+	if(this->getMAna()>=15)
 	{
-		x=(this->getArmaduraFisica())+2;
-		y=(this->getArmaduraRunica())+2;
+		x=(this->getArmFisica())+5;
+		y=(this->getArmRunica())+5;
 		this->debitarMana(15);
-		this->setArmaduraRunica(y);
-		this->setArmaduraFisica(x);
+		this->setArmRunica(y);
+		this->setArmFisica(x);
 		cout<<"O esqueleto se cobriu de aura sombria, seus golpes causarão menos dano!"<<endl;
 	}
 	else
 	{
 		cout<<"O esqueleto disparou um ataque simples!"<<endl;
-		this->realizarDano(valor);
+		this->Dano(armFisica);
 	}
-}
-int esqueleto::realizarAtaque(int armFisica, int armRunica)
-{
-	int x=sorteio.Jogar();
-	int valor=0;
-	if(x==1)
-	{
-		valor=this->laminaVenenosa(armFisica);
-		return valor;
-	}
-	else if(x==2)
-	{
-		this->veuDasSombras(armFisica);
-		return valor;
-	}
-	else
-	{
-		cout<<"O esqueleto disparou um ataque simples!"<<endl;
-		valor=this->realizarDano(armFisica);
-		return valor;
-	}
+	return 0;
 }

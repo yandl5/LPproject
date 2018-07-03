@@ -2,77 +2,56 @@
 #define MAXHP 400
 #define MAXSP 200
 #define MAXatack 15
-paladino::paladino(string nome):entidade(400,200),ataque(15),bloqueio(15,30),esquiva(5), Nome(nome){}
+paladino::paladino(string Nome):personagem(25,400,200,20,30,5,Nome){}
 paladino::~paladino(){}
-void paladino::meditar()
+int paladino::skillUm(int armFisica,int armRunica,int hp)
 {
-	int mana=50,hp=30;
-
-	if((this->getMana()+mana)<=MAXSP)
+	int mana=50,Hp=30;
+	if((this->getMAna()+mana)<=MAXSP)
 	{
-		this->setMana(this->getMana()+mana);
+		this->setMAna(this->getMana()+mana);
 	}
 	else
 	{
-		this->setMana(MAXSP);
+		this->setMAna(MAXSP);
 	}
-	if((this->getHP()+hp)<=MAXHP)
+	if((this->getHp()+Hp)<=MAXHP)
 	{
-		this->setHP(this->getHP()+hp);
+		this->setHp(this->getHp()+Hp);
 	}
 	else
 	{
-		this->setHP(MAXHP);
+		this->setHp(MAXHP);
 	}
 	cout<<"O paladino meditou e aumentou sua concentração ignorando ferimentos ou cansaço!"<<endl;
-	return;
+	return 0;
 }
-int paladino::gloriaDivina(int valor)
+int paladino::skillDois(int armFisica,int armRunica,int hp)
 {
-	if(this->getMana()>=10)
+	if(this->getMAna()>=10)
 	{
-		this->debitarMana(10);
-		cout<<"O paladino desfere um poderoso golpe mágico contra o monstro!"<<endl;
-		return this->realizarDano(valor)*2;
+		this->debitarMAna(10);
+		cout<<"O paladino disfere um poderoso golpe mágico contra o monstro!"<<endl;
+		return this->Dano(armFisica)*2;
 	}
 	else
 	{
-		cout<<"O paladino se ver obrigado a meditar, pois está sem energia"<<endl;
-		this->meditar();
+		cout<<"O paladino usa um ataque simples, pois está sem energia!"<<endl;
+		this->Dano(armFisica);
 		return 0;
 	}
 }
-void paladino::encantarArma()
+int paladino::skillTres(int armFisica,int armRunica,int hp)
 {
-	if(this->getMana()>=10)
+	if(this->getMAna()>=10)
 	{
 		cout<<"O paladino encantou a sua arma"<<endl;
-		this->setValorAtaque(this->getValorAtaque()+10);
+		this->setAtaq(this->getAtaque()+10);
 	}
 	else
 	{
-		cout<<"O paladino se ver obrigado a meditar, pois está sem energia"<<endl;
-		this->meditar();
+		cout<<"O paladino usa um ataque simples, pois está sem energia!"<<endl;
+		this->Dano(armFisica);
 	}
-}
-int paladino::controleAtaque(string valor,int armRunica)
-{
-	int dano=0;
-	if(valor=="1")
-	{
-		this->meditar();
-	}
-	else if(valor=="2")
-	{
-		dano=this->gloriaDivina(armRunica);
-	}
-	else if(valor=="3")
-	{
-		this->encantarArma();
-	}
-	return dano;
-}
-string paladino::getNome()
-{
-	return Nome;
+	return 0;
 }

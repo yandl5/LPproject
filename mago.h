@@ -1,6 +1,7 @@
 #ifndef MAGO
 #define MAGO
 #include "entidade.h"
+#include "jogador.h"
 class mago:public entidade, public ataque, public bloqueio, public esquiva
 {
 private:

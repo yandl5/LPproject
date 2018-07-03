@@ -1,15 +1,15 @@
-#ifndef ESQUELETO
-#define ESQUELETO
+#ifndef MINOTAURO
+#define MINOTAURO
 #include "entidade.h"
 #include "monstros.h"
-class esqueleto : public monstro
+class minotauro: public monstro
 {
 private:
 public:
-	esqueleto();
-	~esqueleto();
+	minotauro();
+	~minotauro();
 	int skillUm(int armFisica,int armRunica,int hp);
 	int skillDois(int armFisica,int armRunica,int hp);
-}
-;
+	//int realizarAtaque(int armFisica, int armRunica,int hp);
+};
 #endif

@@ -1,17 +1,15 @@
 #ifndef PALADINO
 #define PALADINO
 #include "entidade.h"
-class paladino:public entidade,public ataque,public bloqueio, public esquiva
+#include "personagem.h"
+class paladino:public personagem
 {
 private:
-	string Nome;
 public:
-	paladino(string nome);
+	paladino(string Nome);
 	~paladino();
-	string getNome();
-	void meditar();
-	int gloriaDivina(int valor);
-	void encantarArma();
-	int controleAtaque(string valor,int armRunica);
+	int skillUm(int armFisica,int armRunica,int hp);
+	int skillDois(int armFisica,int armRunica,int hp);
+	int skillTres(int armFisica,int armRunica,int hp);
 };
 #endif

@@ -20,6 +20,7 @@ int assassino::laminaVenenosa(int valor)
 	{
 		cout<<"O assassino embebe sua lâmina em veneno, seus golpes físicos causarão mais dano!"<<endl;
 		this->setValorAtaque(this->getValorAtaque()+10);
+		ligadoLamina=true;
 		return 0;
 	}
 	else if(ligadoLamina==true)
@@ -87,6 +88,7 @@ int assassino::controleAtaque(string valor,int armFisica)
 	int dano=0;
 	if(valor=="1")
 	{
+		cout<<"O assassino dispara um ataque simples!"<<endl;
 		dano=this->realizarDano(armFisica);
 	}
 	else if(valor=="2")
