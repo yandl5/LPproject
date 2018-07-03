@@ -1,72 +1,45 @@
 #include "viking.h"
-viking::viking(string nome):entidade(225,80),ataque(25),bloqueio(5,3),esquiva(20), Nome(nome){}
+viking::viking(string Nome):personagem(35,280,160,10,15,20,Nome){}
 viking::~viking(){}
-int viking::balancoTemerario(int valor)
+int viking::skillUm(int armFisica,int armRunica,int hp)
 {
-	if(this->getMana()>5)
+	if(this->getMAna()>5)
 	{
 		cout<<"O viking arremessou seu machado na critura ignorando completamente sua defesa!"<<endl;
-		this->debitarMana(5);
+		this->debitarMAna(5);
 		return 20;
 	}
 	else
 	{
 		cout<<"O viking não tem energia para esse golpe, ele hesita e dispara um ataque normal"<<endl;
-		return this->realizarDano(valor);
+		return this->Dano(armFisica);
 	}
 }
-int viking::furiaImplacavel(int valor)
+int viking::skillDois(int armFisica,int armRunica,int hp)
 {
-	if(this->getHP()>30)
+	if(this->getHp()>30)
 	{
 		cout<<"O viking usa o peso do seu corpo sem se preocupar com nada, e causa dano ao monstro!"<<endl;
-		this->debitarHP(30);
-		return (this->realizarDano(valor)*2);
+		this->debitarHp(30);
+		return (this->Dano(armFisica)*2);
 	}
 	else
 	{
 		cout<<"O viking não tem forças para esse golpe, ele hesita e dispara um ataque normal"<<endl;
-		return this->realizarDano(valor);
+		return this->Dano(armFisica);
 	}
 }
-int viking::avancoFinal(int hp,int valor)
+int viking::skillTres(int armFisica,int armRunica,int hp)
 {
-	if(this->getHP()>150)
+	if(this->getHp()>150)
 	{
 		cout<<"O viking prepara um golpe letal que mata seu alvo e consome boa parte de sua vida"<<endl;
-		this->debitarHP(150);
+		this->debitarHp(150);
 		return hp;
 	}
 	else
 	{
 		cout<<"O viking não tem forças para esse golpe, ele hesita e dispara um ataque normal"<<endl;
-		return this->realizarDano(valor);
+		return this->Dano(armFisica);
 	}
-
-}
-int viking::controleAtaque(string valor,int armFisica,int HP)
-{
-	int dano=0;
-	if(valor=="1")
-	{
-		cout<<"O viking ataca com um golpe simples!"<<endl;
-		dano=this->realizarDano(armFisica);
-	}
-	else if(valor=="2")
-	{
-		dano=this->balancoTemerario(armFisica);
-	}
-	else if(valor=="3")
-	{
-		dano=this->furiaImplacavel(armFisica);
-	}
-	else if(valor=="4")
-	{
-		dano=this->avancoFinal(HP,armFisica);
-	}
-	return dano;
-}
-string viking::getNome()
-{
-	return Nome;
 }

@@ -1,19 +1,15 @@
 #ifndef MAGO
 #define MAGO
 #include "entidade.h"
-#include "jogador.h"
-class mago:public entidade, public ataque, public bloqueio, public esquiva
+#include "personagem.h"
+class mago:public personagem
 {
 private:
-	string Nome;
 public:
-	mago(string nome);
+	mago(string Nome);
 	~mago();
-	string getNome();
-	int faisca();
-	int geloPerpetuo(int valor);
-	int inferno(int valor);
-	void protectMana();
-	int controleAtaque(string valor,int armRunica);
+	int skillUm(int armFisica,int armRunica,int hp);
+	int skillDois(int armFisica,int armRunica,int hp);
+	int skillTres(int armFisica,int armRunica,int hp);
 };
 #endif

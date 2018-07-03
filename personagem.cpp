@@ -7,11 +7,11 @@ int personagem::controleAtaque(string valor,int armFisica,int armRunica,int hp)
 	int dano=0;
 	if(valor=="1")
 	{
-		valor=this->Dano(armFisica);
+		dano=this->Dano(armFisica);
 	}
 	if(valor=="2")
 	{
-		valor=this->skillUm(armFisica,armRunica,hp);
+		dano=this->skillUm(armFisica,armRunica,hp);
 	}
 	else if(valor=="3")
 	{
@@ -19,7 +19,7 @@ int personagem::controleAtaque(string valor,int armFisica,int armRunica,int hp)
 	}
 	else if(valor=="4")
 	{
-		valor=this->skillTres(armFisica,armRunica,hp);
+		dano=this->skillTres(armFisica,armRunica,hp);
 	}
 	return dano;
 }
@@ -81,4 +81,8 @@ void personagem::setHp(int valor)
 void personagem::setMAna(int valor)
 {
 	this->setMAna(valor);
+}
+void personagem::setEsquiv(int valor)
+{
+	this->setEsquiva(valor);
 }

@@ -31,5 +31,6 @@ public:
 	void setArmRunica(int valor);
 	void setHp(int valor);
 	void setMAna(int valor);
+	void setEsquiv(int valor);
 };
 #endif

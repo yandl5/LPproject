@@ -1,20 +1,19 @@
 #ifndef ASSASSINO 
 #define ASSASSINO
 #include "entidade.h"
-class assassino: public entidade, public ataque, public bloqueio, public esquiva
+#include "personagem.h"
+class assassino: public personagem
 {
 private:
-	string Nome;
 	bool ligadoLamina;
 	bool ligadoEsquivaPerfeita;
 public:
 	assassino(string nome);
 	~assassino();
-	int ataqueDuplo(int valor);
-	int laminaVenenosa(int valor);
-	int esquivaPerfeita(int valor);
-	string getNome();
+
+	int skillUm(int armFisica,int armRunica,int hp);
+	int skillDois(int armFisica,int armRunica,int hp);
+	int skillTres(int armFisica,int armRunica,int hp);
 	void aplicarDebuffs();
-	int controleAtaque(string valor,int armFisica);
 };
 #endif

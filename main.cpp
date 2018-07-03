@@ -12,18 +12,21 @@
 #include <vector>
 #include <memory>
 #include <string>
-//#include "jogador.h"
 #include "monstros.h"
 #include "personagem.h"
+#include "combate.h"
 using namespace std;
 int main()
 {
-	minotauro a;
-	esqueleto b;
-	vector<shared_ptr<monstro>> c;
-	c.push_back(make_shared<esqueleto>());
-	c.push_back(make_shared<minotauro>());
-	cout<<c[0]->Dano(7)<<endl<<c[1]->getNome()<<endl;
+	vector<shared_ptr<personagem>> c;
+	int x=0;
+	c.push_back(make_shared<viking>("viking"));
+	vector<shared_ptr<monstro>> b;
+	b.push_back(make_shared<esqueleto>());
+	paladino a("joaozin");
+	x=a.skillDois(5,3,80);
+	cout<<x<<endl;
+	//combate(c,b,0);
 	/*while(a.getHP()>0&&c.getHP()>0)
 	{
 		cin>>x;

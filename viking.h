@@ -1,17 +1,15 @@
 #ifndef VIKING
 #define VIKING 
 #include "entidade.h"
-class viking: public entidade,public ataque,public bloqueio, public esquiva
+#include "personagem.h"
+class viking: public personagem
 {
 private:
-	string Nome;
 public:
 	viking(string nome);
 	~viking();
-	string getNome();
-	int balancoTemerario(int valor);
-	int furiaImplacavel(int valor);
-	int avancoFinal(int hp,int armFisica);
-	int controleAtaque(string valor,int armFisica,int HP);
+	int skillUm(int armFisica,int armRunica,int hp);
+	int skillDois(int armFisica,int armRunica,int hp);
+	int skillTres(int armFisica,int armRunica,int hp);
 };
 #endif
