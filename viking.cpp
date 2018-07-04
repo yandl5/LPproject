@@ -1,6 +1,27 @@
 #include "viking.h"
-viking::viking(string Nome):personagem(35,280,160,10,15,20,Nome){}
-viking::~viking(){}
+viking::viking(string Nome):personagem(35,430,160,20,15,20,Nome){}
+viking::~viking(){cout<<"Espero que aquele maldito cumpra com seu acordo!"<<endl;}
+int viking::controleAtaque(string valor,int armFisica,int armRunica,int hp)
+{
+	int dano=0;
+	if(valor=="1")
+	{
+		dano=this->Dano(armFisica);
+	}
+	if(valor=="2")
+	{
+		dano=this->skillUm(armFisica,armRunica,hp);
+	}
+	else if(valor=="3")
+	{
+		dano=this->skillDois(armFisica,armRunica,hp);
+	}
+	else if(valor=="4")
+	{
+		dano=this->skillTres(armFisica,armRunica,hp);
+	}
+	return dano;
+}
 int viking::skillUm(int armFisica,int armRunica,int hp)
 {
 	if(this->getMAna()>5)

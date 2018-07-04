@@ -10,7 +10,7 @@ private:
 public:
 	assassino(string nome);
 	~assassino();
-
+	int controleAtaque(string valor,int armFisica,int armRunica,int hp);
 	int skillUm(int armFisica,int armRunica,int hp);
 	int skillDois(int armFisica,int armRunica,int hp);
 	int skillTres(int armFisica,int armRunica,int hp);

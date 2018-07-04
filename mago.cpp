@@ -1,6 +1,27 @@
 #include "mago.h"
 mago::mago(string Nome):personagem(5,200,600,20,50,10,Nome){}
-mago::~mago(){}
+mago::~mago(){cout<<"No final das contas não sou tão covarde assim não é mesmo? Queria viver mais"<<endl;}
+int mago::controleAtaque(string valor,int armFisica,int armRunica,int hp)
+{
+	int dano=0;
+	if(valor=="1")
+	{
+		dano=this->Dano(armFisica);
+	}
+	if(valor=="2")
+	{
+		dano=this->skillUm(armFisica,armRunica,hp);
+	}
+	else if(valor=="3")
+	{
+		dano=this->skillDois(armFisica,armRunica,hp);
+	}
+	else if(valor=="4")
+	{
+		dano=this->skillTres(armFisica,armRunica,hp);
+	}
+	return dano;
+}
 int mago::skillUm(int armFisica,int armRunica,int hp)
 {
 	if(this->getMAna()>=30)

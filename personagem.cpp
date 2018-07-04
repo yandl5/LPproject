@@ -80,9 +80,15 @@ void personagem::setHp(int valor)
 }
 void personagem::setMAna(int valor)
 {
-	this->setMAna(valor);
+	this->setMana(valor);
 }
 void personagem::setEsquiv(int valor)
 {
 	this->setEsquiva(valor);
+}
+bool personagem::Esquivar()
+{
+	bool aux=false;
+	aux=this->esquivar();
+	return aux;
 }

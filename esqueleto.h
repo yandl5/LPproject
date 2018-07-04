@@ -8,8 +8,6 @@ private:
 public:
 	esqueleto();
 	~esqueleto();
-	int skillUm(int armFisica,int armRunica,int hp);
-	int skillDois(int armFisica,int armRunica,int hp);
 }
 ;
 #endif

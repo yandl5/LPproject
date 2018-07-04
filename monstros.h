@@ -15,8 +15,6 @@ private:
 public:
 	monstro(int valorAtaque,int hp,int mana,int armFisica,int armRunica,int perEsquiva,string Nome,int Tipo);
 	~monstro();
-	int skillUm(int armFisica,int armRunica,int hp);
-	int skillDois(int armFisica,int armRunica,int hp);
 	int realizarAtaque(int armFisica,int armRunica,int hp);
 	string getNome();
 	int getAtaque();
@@ -30,5 +28,6 @@ public:
 	int getArmRunica();
 	void setArmFisica(int valor);
 	void setArmRunica(int valor);
+	bool Esquivar();
 };
 #endif

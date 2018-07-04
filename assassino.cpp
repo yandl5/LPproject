@@ -1,6 +1,27 @@
 #include "assassino.h"
-assassino::assassino(string Nome):personagem(25,400,200,20,30,5,Nome),ligadoLamina(false),ligadoEsquivaPerfeita(false){}
-assassino::~assassino(){}
+assassino::assassino(string Nome):personagem(25,240,190,10,30,50,Nome),ligadoLamina(false),ligadoEsquivaPerfeita(false){}
+assassino::~assassino(){cout<<"Adeus, Sophie..."<<endl;}
+int assassino::controleAtaque(string valor,int armFisica,int armRunica,int hp)
+{
+	int dano=0;
+	if(valor=="1")
+	{
+		dano=this->Dano(armFisica);
+	}
+	if(valor=="2")
+	{
+		dano=this->skillUm(armFisica,armRunica,hp);
+	}
+	else if(valor=="3")
+	{
+		dano=this->skillDois(armFisica,armRunica,hp);
+	}
+	else if(valor=="4")
+	{
+		dano=this->skillTres(armFisica,armRunica,hp);
+	}
+	return dano;
+}
 int assassino::skillUm(int armFisica,int armRunica,int hp)
 {
 	this->aplicarDebuffs();
@@ -29,6 +50,7 @@ int assassino::skillDois(int armFisica,int armRunica,int hp)
 	{
 		cout<<"O veneno foi desativado e o assassino disparou um ataque!"<<endl;
 		this->setAtaq(this->getAtaque()-10);
+		ligadoLamina=false;
 		return this->Dano(armFisica);
 	}
 	else
@@ -44,12 +66,14 @@ int assassino::skillTres(int armFisica,int armRunica,int hp)
 	{
 		cout<<"O assassino está invalvejável, sua energia está sendo consumida!"<<endl;
 		this->setEsquiv(100);
+		ligadoEsquivaPerfeita=true;
 		return 0;
 	}
 	else if(ligadoEsquivaPerfeita==true)
 	{
 		cout<<"A magia de ivunerabilidade acabou, o assassino se viu obrigado a atacar!"<<endl;
 		this->setEsquiv(50);
+		ligadoEsquivaPerfeita=false;
 		return this->Dano(armFisica);
 	}
 	else
