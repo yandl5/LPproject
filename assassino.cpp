@@ -1,8 +1,19 @@
 #include "assassino.h"
+/**
+	*@brief Criação da classe assassino.
+	*@details Utilização da classe personagem como base.
+	*@return Objeto assassino.
+*/
 assassino::assassino(string Nome):personagem(25,240,190,10,30,50,Nome),ligadoLamina(false),ligadoEsquivaPerfeita(false){}
-assassino::~assassino(){cout<<"Adeus, Sophie..."<<endl;}
+assassino::~assassino(){cout<<endl<<"Adeus, Sophie..."<<endl;}
+/**
+	*@brief Método de controle de ataque.
+	*@details recebe valor do usuário, armadura física, armadura mágica e hp do alvo.
+	*@return dano causado.
+*/
 int assassino::controleAtaque(string valor,int armFisica,int armRunica,int hp)
 {
+	this->aplicarDebuffs();
 	int dano=0;
 	if(valor=="1")
 	{
@@ -22,9 +33,13 @@ int assassino::controleAtaque(string valor,int armFisica,int armRunica,int hp)
 	}
 	return dano;
 }
+/**
+	*@brief Método skillUm.
+	*@details Dobra o dano físico causado a custo de 5 de mana.
+	*@return Dano causado.
+*/
 int assassino::skillUm(int armFisica,int armRunica,int hp)
 {
-	this->aplicarDebuffs();
 	if(this->getMAna()>=5)
 	{
 		cout<<"O assassino desfere dois golpes no mesmo movimento"<<endl;
@@ -36,9 +51,13 @@ int assassino::skillUm(int armFisica,int armRunica,int hp)
 		return this->Dano(armFisica);
 	}
 }
+/**
+	*@brief Método skill dois.
+	*@details Habilita +10 de dano na arma, com custo de 5 de mana por round.
+	*@return Status melhorado ou dano.
+*/
 int assassino::skillDois(int armFisica,int armRunica,int hp)
 {
-	this->aplicarDebuffs();
 	if(this->getMAna()>=5&&ligadoLamina==false)
 	{
 		cout<<"O assassino embebe sua lâmina em veneno, seus golpes físicos causarão mais dano!"<<endl;
@@ -59,9 +78,13 @@ int assassino::skillDois(int armFisica,int armRunica,int hp)
 		return this->Dano(armFisica);
 	}
 }
+/**
+	*@brief Método skillTres.
+	*@details Seta esquiva como 100 ao custo de perder 20 de mana continuamente.
+	*@return SetEsquiva ou dano.
+*/
 int assassino::skillTres(int armFisica,int armRunica,int hp)
 {
-	this->aplicarDebuffs();
 	if(this->getMAna()>=20&&ligadoEsquivaPerfeita==false)
 	{
 		cout<<"O assassino está invalvejável, sua energia está sendo consumida!"<<endl;
@@ -82,6 +105,11 @@ int assassino::skillTres(int armFisica,int armRunica,int hp)
 		return this->Dano(armFisica);
 	}
 }
+/**
+	*@brief Método aplicar debuffs.
+	*@details Contabiliza a perca de mana com as skills passiva 2 e 3.
+	*@return void.
+*/
 void assassino::aplicarDebuffs()
 {
 	if(this->getMAna()<20&&ligadoEsquivaPerfeita==true)

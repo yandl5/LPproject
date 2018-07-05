@@ -1,9 +1,16 @@
 #include "paladino.h"
-#define MAXHP 400
-#define MAXSP 200
-#define MAXatack 15
-paladino::paladino(string Nome):personagem(25,400,200,20,30,5,Nome){}
-paladino::~paladino(){cout<<"Foi uma boa vida, espero que consigam vingar minha morte"<<endl;}
+/**
+	*@brief Criação da classe paladino.
+	*@details Utilização da classe personagem como base.
+	*@return Objeto paladino.
+*/
+paladino::paladino(string Nome):personagem(20,600,200,20,30,5,Nome){}
+paladino::~paladino(){cout<<endl<<"Foi uma boa vida, espero que consigam vingar minha morte"<<endl;}
+/**
+	*@brief Método de controle de ataque.
+	*@details recebe valor do usuário, armadura física, armadura mágica e hp do alvo.
+	*@return dano causado.
+*/
 int paladino::controleAtaque(string valor,int armFisica,int armRunica,int hp)
 {
 	int dano=0;
@@ -26,6 +33,11 @@ int paladino::controleAtaque(string valor,int armFisica,int armRunica,int hp)
 	}
 	return dano;
 }
+/**
+	*@brief Método skillUm.
+	*@details Dano baseado na armadura física e mágica do alvo a custo de 30 de mana.
+	*@return Dano causado.
+*/
 int paladino::skillUm(int armFisica,int armRunica,int hp)
 {
 	if(this->getMAna()>=30)
@@ -41,6 +53,11 @@ int paladino::skillUm(int armFisica,int armRunica,int hp)
 		return 0;
 	}
 }
+/**
+	*@brief Método skill dois.
+	*@details Dano simples baseado na armadura física, custa 10 de mana.
+	*@return Dano causado.
+*/
 int paladino::skillDois(int armFisica,int armRunica,int hp)
 {
 	if(this->getMAna()>=10)
@@ -56,6 +73,11 @@ int paladino::skillDois(int armFisica,int armRunica,int hp)
 		return 0;
 	}
 }
+/**
+	*@brief Método skillTres.
+	*@details Aumenta o dano da arma em +10,custa 10 de mana.
+	*@return Status melhorado.
+*/
 int paladino::skillTres(int armFisica,int armRunica,int hp)
 {
 	if(this->getMAna()>=10)

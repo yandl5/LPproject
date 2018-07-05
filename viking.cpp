@@ -1,6 +1,16 @@
 #include "viking.h"
-viking::viking(string Nome):personagem(35,430,160,20,15,20,Nome){}
-viking::~viking(){cout<<"Espero que aquele maldito cumpra com seu acordo!"<<endl;}
+/**
+	*@brief Criação da classe viking.
+	*@details Utilização da classe personagem como base.
+	*@return Objeto viking.
+*/
+viking::viking(string Nome):personagem(35,590,70,20,15,20,Nome){}
+viking::~viking(){cout<<endl<<"Espero que aquele maldito cumpra com seu acordo!"<<endl;}
+/**
+	*@brief Método de controle de ataque.
+	*@details recebe valor do usuário, armadura física, armadura mágica e hp do alvo.
+	*@return dano causado.
+*/
 int viking::controleAtaque(string valor,int armFisica,int armRunica,int hp)
 {
 	int dano=0;
@@ -22,13 +32,18 @@ int viking::controleAtaque(string valor,int armFisica,int armRunica,int hp)
 	}
 	return dano;
 }
+/**
+	*@brief Método skillUm.
+	*@details Dano fixo de 35, custo de mana 5.
+	*@return Dano causado.
+*/
 int viking::skillUm(int armFisica,int armRunica,int hp)
 {
 	if(this->getMAna()>5)
 	{
 		cout<<"O viking arremessou seu machado na critura ignorando completamente sua defesa!"<<endl;
 		this->debitarMAna(5);
-		return 20;
+		return 35;
 	}
 	else
 	{
@@ -36,13 +51,18 @@ int viking::skillUm(int armFisica,int armRunica,int hp)
 		return this->Dano(armFisica);
 	}
 }
+/**
+	*@brief Método skillDois.
+	*@details Dano baseado na armadura física, custo de 30 de hp.
+	*@return Dano causado.
+*/
 int viking::skillDois(int armFisica,int armRunica,int hp)
 {
-	if(this->getHp()>30)
+	if(this->getHp()>20)
 	{
 		cout<<"O viking usa o peso do seu corpo sem se preocupar com nada, e causa dano ao monstro!"<<endl;
-		this->debitarHp(30);
-		return (this->Dano(armFisica)*2);
+		this->debitarHp(20);
+		return (this->Dano(armFisica)*3);
 	}
 	else
 	{
@@ -50,6 +70,11 @@ int viking::skillDois(int armFisica,int armRunica,int hp)
 		return this->Dano(armFisica);
 	}
 }
+/**
+	*@brief Método skillUm.
+	*@details Dano que se acertar mata instantâneamente o alvo, custa 150 de hp.
+	*@return Dano causado.
+*/
 int viking::skillTres(int armFisica,int armRunica,int hp)
 {
 	if(this->getHp()>150)

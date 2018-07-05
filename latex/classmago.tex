@@ -1,0 +1,98 @@
+\hypertarget{classmago}{}\section{mago Class Reference}
+\label{classmago}\index{mago@{mago}}
+Inheritance diagram for mago\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classmago}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmago_ae5292ae10f4e5cae0a4a73d185807fbc}{mago}} (string Nome)
+\begin{DoxyCompactList}\small\item\em Criação da classe mago. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classmago_af10f6c9bcbbf77870f376a48b1cd0601}{controle\+Ataque}} (string valor, int arm\+Fisica, int arm\+Runica, int hp)
+\begin{DoxyCompactList}\small\item\em Método de controle de ataque. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classmago_a039c9975fad5dbc54d5f3ab51bf3df44}{skill\+Um}} (int arm\+Fisica, int arm\+Runica, int hp)
+\begin{DoxyCompactList}\small\item\em Método skill\+Um. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classmago_ac0a8309b459ab7f27f356eff72817c2f}{skill\+Dois}} (int arm\+Fisica, int arm\+Runica, int hp)
+\begin{DoxyCompactList}\small\item\em Método skill dois. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classmago_a77280ba40aac7fdf8766950261821a39}{skill\+Tres}} (int arm\+Fisica, int arm\+Runica, int hp)
+\begin{DoxyCompactList}\small\item\em Método skill três. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmago_ae5292ae10f4e5cae0a4a73d185807fbc}\label{classmago_ae5292ae10f4e5cae0a4a73d185807fbc}} 
+\index{mago@{mago}!mago@{mago}}
+\index{mago@{mago}!mago@{mago}}
+\subsubsection{\texorpdfstring{mago()}{mago()}}
+{\footnotesize\ttfamily mago\+::mago (\begin{DoxyParamCaption}\item[{string}]{Nome }\end{DoxyParamCaption})}
+
+
+
+Criação da classe mago. 
+
+Utilização da classe personagem como base. \begin{DoxyReturn}{Returns}
+Objeto mago. 
+\end{DoxyReturn}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classmago_af10f6c9bcbbf77870f376a48b1cd0601}\label{classmago_af10f6c9bcbbf77870f376a48b1cd0601}} 
+\index{mago@{mago}!controle\+Ataque@{controle\+Ataque}}
+\index{controle\+Ataque@{controle\+Ataque}!mago@{mago}}
+\subsubsection{\texorpdfstring{controle\+Ataque()}{controleAtaque()}}
+{\footnotesize\ttfamily int mago\+::controle\+Ataque (\begin{DoxyParamCaption}\item[{string}]{valor,  }\item[{int}]{arm\+Fisica,  }\item[{int}]{arm\+Runica,  }\item[{int}]{hp }\end{DoxyParamCaption})}
+
+
+
+Método de controle de ataque. 
+
+recebe valor do usuário, armadura física, armadura mágica e hp do alvo. \begin{DoxyReturn}{Returns}
+dano causado. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmago_ac0a8309b459ab7f27f356eff72817c2f}\label{classmago_ac0a8309b459ab7f27f356eff72817c2f}} 
+\index{mago@{mago}!skill\+Dois@{skill\+Dois}}
+\index{skill\+Dois@{skill\+Dois}!mago@{mago}}
+\subsubsection{\texorpdfstring{skill\+Dois()}{skillDois()}}
+{\footnotesize\ttfamily int mago\+::skill\+Dois (\begin{DoxyParamCaption}\item[{int}]{arm\+Fisica,  }\item[{int}]{arm\+Runica,  }\item[{int}]{hp }\end{DoxyParamCaption})}
+
+
+
+Método skill dois. 
+
+Skill de dano massivo baseado na mana, armadura rúnica e valor constante. \begin{DoxyReturn}{Returns}
+Dano causado. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmago_a77280ba40aac7fdf8766950261821a39}\label{classmago_a77280ba40aac7fdf8766950261821a39}} 
+\index{mago@{mago}!skill\+Tres@{skill\+Tres}}
+\index{skill\+Tres@{skill\+Tres}!mago@{mago}}
+\subsubsection{\texorpdfstring{skill\+Tres()}{skillTres()}}
+{\footnotesize\ttfamily int mago\+::skill\+Tres (\begin{DoxyParamCaption}\item[{int}]{arm\+Fisica,  }\item[{int}]{arm\+Runica,  }\item[{int}]{hp }\end{DoxyParamCaption})}
+
+
+
+Método skill três. 
+
+skill que aumenta o hp baseado na sua mana atual. \begin{DoxyReturn}{Returns}
+Status melhorado. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmago_a039c9975fad5dbc54d5f3ab51bf3df44}\label{classmago_a039c9975fad5dbc54d5f3ab51bf3df44}} 
+\index{mago@{mago}!skill\+Um@{skill\+Um}}
+\index{skill\+Um@{skill\+Um}!mago@{mago}}
+\subsubsection{\texorpdfstring{skill\+Um()}{skillUm()}}
+{\footnotesize\ttfamily int mago\+::skill\+Um (\begin{DoxyParamCaption}\item[{int}]{arm\+Fisica,  }\item[{int}]{arm\+Runica,  }\item[{int}]{hp }\end{DoxyParamCaption})}
+
+
+
+Método skill\+Um. 
+
+Aplica um dano baseado na armadura mágica, custa 30 de mana, ou dispara golpe simples. \begin{DoxyReturn}{Returns}
+Dano causado. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+mago.\+h\item 
+mago.\+cpp\end{DoxyCompactItemize}

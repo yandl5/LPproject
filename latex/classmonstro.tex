@@ -1,0 +1,236 @@
+\hypertarget{classmonstro}{}\section{monstro Class Reference}
+\label{classmonstro}\index{monstro@{monstro}}
+Inheritance diagram for monstro\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classmonstro}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmonstro_a0c7be686f5717cb625a3dabb75f6143f}{monstro}} (int valor\+Ataque, int hp, int mana, int arm\+Fisica, int arm\+Runica, int per\+Esquiva, string Nome, int Tipo)
+\begin{DoxyCompactList}\small\item\em Criação da classe monstro. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classmonstro_a37425b0ce131bea83207142ef6b6c3bd}{realizar\+Ataque}} (int arm\+Fisica, int arm\+Runica, int hp)
+\begin{DoxyCompactList}\small\item\em Método de controle de ataque. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classmonstro_a5b70fbe99ed64823246664deec8d4d6c}{get\+Nome}} ()
+\begin{DoxyCompactList}\small\item\em Método get do nome. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmonstro_a4855556c86824869d11cc9f4bda17beb}\label{classmonstro_a4855556c86824869d11cc9f4bda17beb}} 
+int {\bfseries get\+Ataque} ()
+\item 
+int \mbox{\hyperlink{classmonstro_a5fbec06d53697ed81f0ca64136f7eb85}{get\+Hp}} ()
+\begin{DoxyCompactList}\small\item\em Método get de HP. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classmonstro_abf4c7159c0370eef7ee5c1992f475746}{get\+M\+Ana}} ()
+\begin{DoxyCompactList}\small\item\em Método get de mana. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmonstro_a2753a130e042a12b9a5be36cb01deba5}{debitar\+Hp}} (int valor)
+\begin{DoxyCompactList}\small\item\em Método de debitar HP do monstro. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmonstro_a1dfc486d9da7e45f0afc2da3aebfe4f8}{debitar\+M\+Ana}} (int valor)
+\begin{DoxyCompactList}\small\item\em Método de debitar mana do monstro. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classmonstro_ab7a3d4c7f9ca3e5f56e27c5a1716d70f}{get\+Sorteio}} ()
+\begin{DoxyCompactList}\small\item\em Método de sorteia um dado D20. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classmonstro_ad13bd91217c356e1e4ef3e50ee4160aa}{Dano}} (int arm\+Fisica)
+\begin{DoxyCompactList}\small\item\em Método de causar dano do monstro. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classmonstro_adc603e8df99ff928bdb1ffc1a95f604f}{get\+Arm\+Fisica}} ()
+\begin{DoxyCompactList}\small\item\em Método get de armadura física. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classmonstro_abc73db4e55eb8c72aa433d4da43bd997}{get\+Arm\+Runica}} ()
+\begin{DoxyCompactList}\small\item\em Método get de armadura runica. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmonstro_a5935667552ab7ec9ccd94e4632ecb428}{set\+Arm\+Fisica}} (int valor)
+\begin{DoxyCompactList}\small\item\em Método set de valor de armadura física. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmonstro_a81c11a61a2dc1dc6536b3c3a75947060}{set\+Arm\+Runica}} (int valor)
+\begin{DoxyCompactList}\small\item\em Método set de armadura runica. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classmonstro_a256135af5123c6927214fd6ed6d72270}{Esquivar}} ()
+\begin{DoxyCompactList}\small\item\em Método de esquivar do monstro. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmonstro_a0c7be686f5717cb625a3dabb75f6143f}\label{classmonstro_a0c7be686f5717cb625a3dabb75f6143f}} 
+\index{monstro@{monstro}!monstro@{monstro}}
+\index{monstro@{monstro}!monstro@{monstro}}
+\subsubsection{\texorpdfstring{monstro()}{monstro()}}
+{\footnotesize\ttfamily monstro\+::monstro (\begin{DoxyParamCaption}\item[{int}]{valor\+Ataque,  }\item[{int}]{hp,  }\item[{int}]{mana,  }\item[{int}]{arm\+Fisica,  }\item[{int}]{arm\+Runica,  }\item[{int}]{per\+Esquiva,  }\item[{string}]{Nome,  }\item[{int}]{Tipo }\end{DoxyParamCaption})}
+
+
+
+Criação da classe monstro. 
+
+Utilização das classes ataque,bloqueio,entidade e esquiva como base. \begin{DoxyReturn}{Returns}
+Objeto monstro. 
+\end{DoxyReturn}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classmonstro_ad13bd91217c356e1e4ef3e50ee4160aa}\label{classmonstro_ad13bd91217c356e1e4ef3e50ee4160aa}} 
+\index{monstro@{monstro}!Dano@{Dano}}
+\index{Dano@{Dano}!monstro@{monstro}}
+\subsubsection{\texorpdfstring{Dano()}{Dano()}}
+{\footnotesize\ttfamily int monstro\+::\+Dano (\begin{DoxyParamCaption}\item[{int}]{arm\+Fisica }\end{DoxyParamCaption})}
+
+
+
+Método de causar dano do monstro. 
+
+se baseia no valor informado para aplicar dano com base na classe ataque. \begin{DoxyReturn}{Returns}
+valor do dano a ser causado. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmonstro_a2753a130e042a12b9a5be36cb01deba5}\label{classmonstro_a2753a130e042a12b9a5be36cb01deba5}} 
+\index{monstro@{monstro}!debitar\+Hp@{debitar\+Hp}}
+\index{debitar\+Hp@{debitar\+Hp}!monstro@{monstro}}
+\subsubsection{\texorpdfstring{debitar\+Hp()}{debitarHp()}}
+{\footnotesize\ttfamily void monstro\+::debitar\+Hp (\begin{DoxyParamCaption}\item[{int}]{valor }\end{DoxyParamCaption})}
+
+
+
+Método de debitar HP do monstro. 
+
+faz a redução do hp baseado no valor informado. \begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmonstro_a1dfc486d9da7e45f0afc2da3aebfe4f8}\label{classmonstro_a1dfc486d9da7e45f0afc2da3aebfe4f8}} 
+\index{monstro@{monstro}!debitar\+M\+Ana@{debitar\+M\+Ana}}
+\index{debitar\+M\+Ana@{debitar\+M\+Ana}!monstro@{monstro}}
+\subsubsection{\texorpdfstring{debitar\+M\+Ana()}{debitarMAna()}}
+{\footnotesize\ttfamily void monstro\+::debitar\+M\+Ana (\begin{DoxyParamCaption}\item[{int}]{valor }\end{DoxyParamCaption})}
+
+
+
+Método de debitar mana do monstro. 
+
+faz a redução do mana baseado no valor informado. \begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmonstro_a256135af5123c6927214fd6ed6d72270}\label{classmonstro_a256135af5123c6927214fd6ed6d72270}} 
+\index{monstro@{monstro}!Esquivar@{Esquivar}}
+\index{Esquivar@{Esquivar}!monstro@{monstro}}
+\subsubsection{\texorpdfstring{Esquivar()}{Esquivar()}}
+{\footnotesize\ttfamily bool monstro\+::\+Esquivar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Método de esquivar do monstro. 
+
+Calcula a chance do usuário se esquivar de determinado dano. \begin{DoxyReturn}{Returns}
+bool valor. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmonstro_adc603e8df99ff928bdb1ffc1a95f604f}\label{classmonstro_adc603e8df99ff928bdb1ffc1a95f604f}} 
+\index{monstro@{monstro}!get\+Arm\+Fisica@{get\+Arm\+Fisica}}
+\index{get\+Arm\+Fisica@{get\+Arm\+Fisica}!monstro@{monstro}}
+\subsubsection{\texorpdfstring{get\+Arm\+Fisica()}{getArmFisica()}}
+{\footnotesize\ttfamily int monstro\+::get\+Arm\+Fisica (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Método get de armadura física. 
+
+\begin{DoxyReturn}{Returns}
+armadura física do monstro. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmonstro_abc73db4e55eb8c72aa433d4da43bd997}\label{classmonstro_abc73db4e55eb8c72aa433d4da43bd997}} 
+\index{monstro@{monstro}!get\+Arm\+Runica@{get\+Arm\+Runica}}
+\index{get\+Arm\+Runica@{get\+Arm\+Runica}!monstro@{monstro}}
+\subsubsection{\texorpdfstring{get\+Arm\+Runica()}{getArmRunica()}}
+{\footnotesize\ttfamily int monstro\+::get\+Arm\+Runica (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Método get de armadura runica. 
+
+\begin{DoxyReturn}{Returns}
+armadura runica do monstro. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmonstro_a5fbec06d53697ed81f0ca64136f7eb85}\label{classmonstro_a5fbec06d53697ed81f0ca64136f7eb85}} 
+\index{monstro@{monstro}!get\+Hp@{get\+Hp}}
+\index{get\+Hp@{get\+Hp}!monstro@{monstro}}
+\subsubsection{\texorpdfstring{get\+Hp()}{getHp()}}
+{\footnotesize\ttfamily int monstro\+::get\+Hp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Método get de HP. 
+
+\begin{DoxyReturn}{Returns}
+hp do monstro. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmonstro_abf4c7159c0370eef7ee5c1992f475746}\label{classmonstro_abf4c7159c0370eef7ee5c1992f475746}} 
+\index{monstro@{monstro}!get\+M\+Ana@{get\+M\+Ana}}
+\index{get\+M\+Ana@{get\+M\+Ana}!monstro@{monstro}}
+\subsubsection{\texorpdfstring{get\+M\+Ana()}{getMAna()}}
+{\footnotesize\ttfamily int monstro\+::get\+M\+Ana (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Método get de mana. 
+
+\begin{DoxyReturn}{Returns}
+mana do monstro. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmonstro_a5b70fbe99ed64823246664deec8d4d6c}\label{classmonstro_a5b70fbe99ed64823246664deec8d4d6c}} 
+\index{monstro@{monstro}!get\+Nome@{get\+Nome}}
+\index{get\+Nome@{get\+Nome}!monstro@{monstro}}
+\subsubsection{\texorpdfstring{get\+Nome()}{getNome()}}
+{\footnotesize\ttfamily string monstro\+::get\+Nome (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Método get do nome. 
+
+\begin{DoxyReturn}{Returns}
+nome do monstro. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmonstro_ab7a3d4c7f9ca3e5f56e27c5a1716d70f}\label{classmonstro_ab7a3d4c7f9ca3e5f56e27c5a1716d70f}} 
+\index{monstro@{monstro}!get\+Sorteio@{get\+Sorteio}}
+\index{get\+Sorteio@{get\+Sorteio}!monstro@{monstro}}
+\subsubsection{\texorpdfstring{get\+Sorteio()}{getSorteio()}}
+{\footnotesize\ttfamily int monstro\+::get\+Sorteio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Método de sorteia um dado D20. 
+
+faz o sorteio do valor para o método controle de ataque. \begin{DoxyReturn}{Returns}
+valor de 1 a 20. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmonstro_a37425b0ce131bea83207142ef6b6c3bd}\label{classmonstro_a37425b0ce131bea83207142ef6b6c3bd}} 
+\index{monstro@{monstro}!realizar\+Ataque@{realizar\+Ataque}}
+\index{realizar\+Ataque@{realizar\+Ataque}!monstro@{monstro}}
+\subsubsection{\texorpdfstring{realizar\+Ataque()}{realizarAtaque()}}
+{\footnotesize\ttfamily int monstro\+::realizar\+Ataque (\begin{DoxyParamCaption}\item[{int}]{arm\+Fisica,  }\item[{int}]{arm\+Runica,  }\item[{int}]{hp }\end{DoxyParamCaption})}
+
+
+
+Método de controle de ataque. 
+
+recebe valor do usuário, armadura física, armadura mágica e hp do alvo. \begin{DoxyReturn}{Returns}
+dano causado. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmonstro_a5935667552ab7ec9ccd94e4632ecb428}\label{classmonstro_a5935667552ab7ec9ccd94e4632ecb428}} 
+\index{monstro@{monstro}!set\+Arm\+Fisica@{set\+Arm\+Fisica}}
+\index{set\+Arm\+Fisica@{set\+Arm\+Fisica}!monstro@{monstro}}
+\subsubsection{\texorpdfstring{set\+Arm\+Fisica()}{setArmFisica()}}
+{\footnotesize\ttfamily void monstro\+::set\+Arm\+Fisica (\begin{DoxyParamCaption}\item[{int}]{valor }\end{DoxyParamCaption})}
+
+
+
+Método set de valor de armadura física. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmonstro_a81c11a61a2dc1dc6536b3c3a75947060}\label{classmonstro_a81c11a61a2dc1dc6536b3c3a75947060}} 
+\index{monstro@{monstro}!set\+Arm\+Runica@{set\+Arm\+Runica}}
+\index{set\+Arm\+Runica@{set\+Arm\+Runica}!monstro@{monstro}}
+\subsubsection{\texorpdfstring{set\+Arm\+Runica()}{setArmRunica()}}
+{\footnotesize\ttfamily void monstro\+::set\+Arm\+Runica (\begin{DoxyParamCaption}\item[{int}]{valor }\end{DoxyParamCaption})}
+
+
+
+Método set de armadura runica. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+monstros.\+h\item 
+monstros.\+cpp\end{DoxyCompactItemize}

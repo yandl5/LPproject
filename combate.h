@@ -15,9 +15,16 @@
 #include "personagem.h"
 #include <string>
 #include <iostream>
+#include "excecao.h"
 using namespace std;
 template<typename T>
 bool combate(T A,vector<shared_ptr<monstro>> it,int i);
+/**
+	*@brief Função combate.
+	*@details Função que recebe um template da classe personagem, um vector de monstros e um índice, faz-se o combate entre os dois primeiros argumentos
+	*@details de modo que se estabeleça o vencedor retorna true caso o personagem ganho e falso caso contrário.
+	*@return Bool valor.
+*/
 template<typename T>
 bool combate(T A,vector<shared_ptr<monstro>> it,int i)
 {
@@ -38,6 +45,19 @@ bool combate(T A,vector<shared_ptr<monstro>> it,int i)
 		cout<<"Vida do monstro: "<<it[i]->getHp()<<endl;
 		cout<<"Escolha sua skill entre 1 e 4"<<endl;
 		cin>>auxiliar;
+		try
+		{
+			if(auxiliar!="1"&&auxiliar!="2"&&auxiliar!="3"&&auxiliar!="4")
+			{
+				throw ArgumentosErrados();
+			}
+		}
+		catch(ArgumentosErrados &ex)
+		{
+			cout<<endl;
+			cerr<<ex.what()<<endl;
+			auxiliar="1";
+		}
 		cout<<endl;
 		esquiva=it[i]->Esquivar();
 		if(esquiva==false){
@@ -56,6 +76,7 @@ bool combate(T A,vector<shared_ptr<monstro>> it,int i)
 			cout<<"Você se esquivou do ataque inimigo"<<endl;
 		}
 	}
+	cout<<endl;
 	if(A[0]->getHp()==0)
 	{
 		return false;

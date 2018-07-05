@@ -1,8 +1,19 @@
 #include "fases.h"
 #include <sstream>
 #include <fstream>
+/**
+	*@brief Construção da classe Fases.
+	*@details Classe baseada na construção do jogo.
+	*@return Objeto fases.
+*/
 fases::fases():vivo(true),endGame(true){}
 fases::~fases(){}
+/**
+	*@brief Método faseUm.
+	*@details Criação da campanha jogável com paladino, faz-se uso de ponteiros inteligentes e vector para alocação das classes,
+	*@details usa o auxílio da classe combate para determinar vencedor do confronto, em caso de vitória total, gera um arquivo com informações.
+	*@return void.
+*/
 void fases::faseUm()
 {
 	cout<<"O rei Edmund recebeu notícias de aldeões que um grande mal estava vindo abrasando a terra, temendo ser tycondyus";
@@ -50,6 +61,12 @@ void fases::faseUm()
 	}
 	return ;
 }
+/**
+	*@brief Método faseDois.
+	*@details Criação da campanha jogável com viking, faz-se uso de ponteiros inteligentes e vector para alocação das classes,
+	*@details usa o auxílio da classe combate para determinar vencedor do confronto, em caso de vitória total, gera um arquivo com informações.
+	*@return void.
+*/
 void fases::faseDois()
 {
 	vivo=true;
@@ -86,6 +103,12 @@ void fases::faseDois()
 	}
 	return ;
 }
+/**
+	*@brief Método faseTres.
+	*@details Criação da campanha jogável com mago, faz-se uso de ponteiros inteligentes e vector para alocação das classes,
+	*@details usa o auxílio da classe combate para determinar vencedor do confronto, em caso de vitória total, gera um arquivo com informações.
+	*@return void.
+*/
 void fases::faseTres()
 {
 	vivo=true;
@@ -119,6 +142,12 @@ void fases::faseTres()
 	}
 	return ;
 }
+/**
+	*@brief Método faseQuatro.
+	*@details Criação da campanha jogável com assassino, faz-se uso de ponteiros inteligentes e vector para alocação das classes,
+	*@details usa o auxílio da classe combate para determinar vencedor do confronto, em caso de vitória total, gera um arquivo com informações.
+	*@return void.
+*/
 void fases::faseQuatro()
 {
 	vivo=true;
@@ -142,7 +171,7 @@ void fases::faseQuatro()
 	if(vivo)
 	{
 		cout<<"Moham sente uma presença maligna, uma aura escura, então era isso que os monstros defendiam?"<<endl<<endl;
-		vivo=combate<vector<shared_ptr<assassino>>>(b,a,3);
+		combate<vector<shared_ptr<assassino>>>(b,a,3);
 	}
 	a.clear();
 	if(vivo)
@@ -157,6 +186,11 @@ void fases::faseQuatro()
 	}
 	return ;
 }
+/**
+	*@brief Método EndGame.
+	*@details Verifica se o jogador completou todas as campanhas e exibe o resultado final do jogo.
+	*@return void.
+*/
 void fases::EndGame()
 {
 	if(endGame==false)
