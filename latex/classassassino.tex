@@ -1,0 +1,113 @@
+\hypertarget{classassassino}{}\section{assassino Class Reference}
+\label{classassassino}\index{assassino@{assassino}}
+Inheritance diagram for assassino\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classassassino}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classassassino_a107c275bfe816f79279ec3976223974f}{assassino}} (string nome)
+\begin{DoxyCompactList}\small\item\em Criação da classe assassino. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classassassino_a3f46fb60f6617502542fe7377a6499ab}{controle\+Ataque}} (string valor, int arm\+Fisica, int arm\+Runica, int hp)
+\begin{DoxyCompactList}\small\item\em Método de controle de ataque. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classassassino_a02ee2eea7a7f1ca7ca8d1b88e481ab97}{skill\+Um}} (int arm\+Fisica, int arm\+Runica, int hp)
+\begin{DoxyCompactList}\small\item\em Método skill\+Um. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classassassino_acd757ef4b59c18d2aa504a6afa15b107}{skill\+Dois}} (int arm\+Fisica, int arm\+Runica, int hp)
+\begin{DoxyCompactList}\small\item\em Método skill dois. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classassassino_ad13d3c24ad8f2f3e0c7274a1a18a0d39}{skill\+Tres}} (int arm\+Fisica, int arm\+Runica, int hp)
+\begin{DoxyCompactList}\small\item\em Método skill\+Tres. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classassassino_a283e61020246d2bec61fe8e661a412e9}{aplicar\+Debuffs}} ()
+\begin{DoxyCompactList}\small\item\em Método aplicar debuffs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classassassino_a107c275bfe816f79279ec3976223974f}\label{classassassino_a107c275bfe816f79279ec3976223974f}} 
+\index{assassino@{assassino}!assassino@{assassino}}
+\index{assassino@{assassino}!assassino@{assassino}}
+\subsubsection{\texorpdfstring{assassino()}{assassino()}}
+{\footnotesize\ttfamily assassino\+::assassino (\begin{DoxyParamCaption}\item[{string}]{Nome }\end{DoxyParamCaption})}
+
+
+
+Criação da classe assassino. 
+
+Utilização da classe personagem como base. \begin{DoxyReturn}{Returns}
+Objeto assassino. 
+\end{DoxyReturn}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classassassino_a283e61020246d2bec61fe8e661a412e9}\label{classassassino_a283e61020246d2bec61fe8e661a412e9}} 
+\index{assassino@{assassino}!aplicar\+Debuffs@{aplicar\+Debuffs}}
+\index{aplicar\+Debuffs@{aplicar\+Debuffs}!assassino@{assassino}}
+\subsubsection{\texorpdfstring{aplicar\+Debuffs()}{aplicarDebuffs()}}
+{\footnotesize\ttfamily void assassino\+::aplicar\+Debuffs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Método aplicar debuffs. 
+
+Contabiliza a perca de mana com as skills passiva 2 e 3. \begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classassassino_a3f46fb60f6617502542fe7377a6499ab}\label{classassassino_a3f46fb60f6617502542fe7377a6499ab}} 
+\index{assassino@{assassino}!controle\+Ataque@{controle\+Ataque}}
+\index{controle\+Ataque@{controle\+Ataque}!assassino@{assassino}}
+\subsubsection{\texorpdfstring{controle\+Ataque()}{controleAtaque()}}
+{\footnotesize\ttfamily int assassino\+::controle\+Ataque (\begin{DoxyParamCaption}\item[{string}]{valor,  }\item[{int}]{arm\+Fisica,  }\item[{int}]{arm\+Runica,  }\item[{int}]{hp }\end{DoxyParamCaption})}
+
+
+
+Método de controle de ataque. 
+
+recebe valor do usuário, armadura física, armadura mágica e hp do alvo. \begin{DoxyReturn}{Returns}
+dano causado. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classassassino_acd757ef4b59c18d2aa504a6afa15b107}\label{classassassino_acd757ef4b59c18d2aa504a6afa15b107}} 
+\index{assassino@{assassino}!skill\+Dois@{skill\+Dois}}
+\index{skill\+Dois@{skill\+Dois}!assassino@{assassino}}
+\subsubsection{\texorpdfstring{skill\+Dois()}{skillDois()}}
+{\footnotesize\ttfamily int assassino\+::skill\+Dois (\begin{DoxyParamCaption}\item[{int}]{arm\+Fisica,  }\item[{int}]{arm\+Runica,  }\item[{int}]{hp }\end{DoxyParamCaption})}
+
+
+
+Método skill dois. 
+
+Habilita +10 de dano na arma, com custo de 5 de mana por round. \begin{DoxyReturn}{Returns}
+Status melhorado ou dano. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classassassino_ad13d3c24ad8f2f3e0c7274a1a18a0d39}\label{classassassino_ad13d3c24ad8f2f3e0c7274a1a18a0d39}} 
+\index{assassino@{assassino}!skill\+Tres@{skill\+Tres}}
+\index{skill\+Tres@{skill\+Tres}!assassino@{assassino}}
+\subsubsection{\texorpdfstring{skill\+Tres()}{skillTres()}}
+{\footnotesize\ttfamily int assassino\+::skill\+Tres (\begin{DoxyParamCaption}\item[{int}]{arm\+Fisica,  }\item[{int}]{arm\+Runica,  }\item[{int}]{hp }\end{DoxyParamCaption})}
+
+
+
+Método skill\+Tres. 
+
+Seta esquiva como 100 ao custo de perder 20 de mana continuamente. \begin{DoxyReturn}{Returns}
+Set\+Esquiva ou dano. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classassassino_a02ee2eea7a7f1ca7ca8d1b88e481ab97}\label{classassassino_a02ee2eea7a7f1ca7ca8d1b88e481ab97}} 
+\index{assassino@{assassino}!skill\+Um@{skill\+Um}}
+\index{skill\+Um@{skill\+Um}!assassino@{assassino}}
+\subsubsection{\texorpdfstring{skill\+Um()}{skillUm()}}
+{\footnotesize\ttfamily int assassino\+::skill\+Um (\begin{DoxyParamCaption}\item[{int}]{arm\+Fisica,  }\item[{int}]{arm\+Runica,  }\item[{int}]{hp }\end{DoxyParamCaption})}
+
+
+
+Método skill\+Um. 
+
+Dobra o dano físico causado a custo de 5 de mana. \begin{DoxyReturn}{Returns}
+Dano causado. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+assassino.\+h\item 
+assassino.\+cpp\end{DoxyCompactItemize}
