@@ -6,7 +6,13 @@
 	*@details Classe baseada na construção do jogo.
 	*@return Objeto fases.
 */
-fases::fases():vivo(true),endGame(true){}
+fases::fases():vivo(true),endGame(true)
+{
+	check.push_back("13895/3645");
+	check.push_back("148455/3775");
+	check.push_back("23355/9045");
+	check.push_back("22346/3647");
+}
 fases::~fases(){}
 /**
 	*@brief Método faseUm.
@@ -54,7 +60,7 @@ void fases::faseUm()
 	{
 		ofstream outFile;
 		outFile.open("Jorah.dat");
-		outFile<<"A cripta leste está a 1 milha de distância do moinho de Nidavelir, se o senhor está lendo isso, minha missão foi cumprida!";
+		outFile<<"13895/3645";
 	}
 	else
 	{
@@ -97,7 +103,7 @@ void fases::faseDois()
 	{
 		ofstream outFile;
 		outFile.open("Ragnar.dat");
-		outFile<<"A cripta Oeste está no cemitério de dojyuno, lembre-se da sua promessa!";
+		outFile<<"148455/3775";
 	}
 	else
 	{
@@ -137,7 +143,7 @@ void fases::faseTres()
 	{
 		ofstream outFile;
 		outFile.open("Merlon.dat");
-		outFile<<"A cripta Norte está em frente a cachoeira de salatur, me desculpe Edmund, eu não voltei!";
+		outFile<<"23355/9045";
 	}
 	else
 	{
@@ -182,7 +188,7 @@ void fases::faseQuatro()
 	{
 		ofstream outFile;
 		outFile.open("Moham.dat");
-		outFile<<"A cripta Sul está no início do vale de kalit, liberte Sophie, esse é o meu último pedido!";
+		outFile<<"22346/3647";
 	}
 	else
 	{
@@ -197,14 +203,27 @@ void fases::faseQuatro()
 */
 void fases::EndGame()
 {
-	if(endGame==false)
+	cout<<endl;
+	if(cartas[0]==check[0]&&cartas[1]==check[1]&&cartas[2]==check[2]&&cartas[3]==check[3])
+	{
+		cout<<"Graças a coragem dos quatro guerreiros o rei conseguiu mobilizar seu exército e derrubar a besta Tycondrius, os nomes deles ";
+		cout<<"foram gravados na história da humanidade!"<<endl;
+		
+	}
+	else
 	{
 		cout<<"Sem a localização das criptas o rei travou a guerra contra Tycondrius porém perdeu, a humanidade foi escravizada e os quatro ";
 		cout<<"guerreiros esquecidos"<<endl;
 	}
-	else
-	{
-		cout<<"Graças a coragem dos quatro guerreiros o rei conseguiu mobilizar seu exército e derrubar a besta Tycondrius, os nomes deles ";
-		cout<<"foram gravados na história da humanidade!"<<endl;
-	}
+}
+istream& operator>> (istream &i, fases &t) {
+	i >>t.aux;
+	t.cartas.push_back(t.aux);
+	i >>t.aux;
+	t.cartas.push_back(t.aux);
+	i >>t.aux;
+	t.cartas.push_back(t.aux);
+	i >>t.aux;
+	t.cartas.push_back(t.aux);
+	return i;
 }

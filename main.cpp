@@ -22,11 +22,11 @@ using namespace std;
 int main()
 {
 	fases a;
-	a.faseUm();
 	a.faseDois();
 	a.faseTres();
 	a.faseQuatro();
 	cout<<endl;
+	cin>>a;
 	a.EndGame();
 	cout<<endl;
 	return 0;

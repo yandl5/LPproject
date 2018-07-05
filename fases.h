@@ -9,6 +9,9 @@ private:
 	vector<shared_ptr<monstro>> a;
 	bool vivo;
 	bool endGame;
+	vector<string> cartas;
+	vector<string> check;
+	string aux;
 public:
 	fases();
 	~fases();
@@ -17,5 +20,6 @@ public:
 	void faseTres();
 	void faseQuatro();
 	void EndGame();
+	friend std::istream& operator>> (std::istream &i, fases &t);
 };
 #endif
