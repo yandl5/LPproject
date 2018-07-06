@@ -64,6 +64,7 @@ int paladino::skillDois(int armFisica,int armRunica,int hp)
 	{
 		this->debitarMAna(10);
 		cout<<"O paladino disfere um poderoso golpe mágico contra o monstro!"<<endl;
+		return this->Dano(armFisica)*3;
 		return this->Dano(armFisica)*2;
 	}
 	else
@@ -92,4 +93,18 @@ int paladino::skillTres(int armFisica,int armRunica,int hp)
 		this->Dano(armFisica);
 	}
 	return 0;
+}
+/**
+	*@brief Método help.
+	*@details Informa ao jogador detalhes das skills.
+	*@return void.
+*/
+void paladino::help()
+{
+	cout<<"Comandos básicos:"<<endl;
+	cout<<"1:Ataque básico!"<<endl;
+	cout<<"2:Luz primordial(golpe baseado na armadura física e mágica do alvo)!"<<endl;
+	cout<<"3:Fé de ferro(similar a luz primordial porém baseado na armadura física com multiplicador maior)!"<<endl;
+	cout<<"4:Glória domini(aumenta os status da arma do paladino)"<<endl;
+	cout<<endl;
 }

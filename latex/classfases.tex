@@ -14,7 +14,16 @@ void \mbox{\hyperlink{classfases_a05138769008d5c7d1b548916ecfa9f34}{fase\+Tres}}
 void \mbox{\hyperlink{classfases_af33d3aefdf442b1ea726645b0c946d78}{fase\+Quatro}} ()
 \begin{DoxyCompactList}\small\item\em Método fase\+Quatro. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classfases_aa05ea0c25d2c70ee022f56f02003b4b5}{End\+Game}} ()
-\begin{DoxyCompactList}\small\item\em Método End\+Game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Método End\+Game. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classfases_aedbb30c3e8ad0b50e96561029aecdf4a}{get\+End\+Game}} ()
+\begin{DoxyCompactList}\small\item\em Método get End Game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+istream \& \mbox{\hyperlink{classfases_a24bc7622c7828e59917da245c41920d8}{operator$>$$>$}} (istream \&i, \mbox{\hyperlink{classfases}{fases}} \&t)
+\begin{DoxyCompactList}\small\item\em Sobrecarga do operado $>$$>$. \end{DoxyCompactList}\item 
+ostream \& \mbox{\hyperlink{classfases_a918b9b50f8716407ea46bdfbf5848271}{operator$<$$<$}} (ostream \&o, \mbox{\hyperlink{classfases}{fases}} \&t)
+\begin{DoxyCompactList}\small\item\em Sobrecarga do operado $<$$<$. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -44,7 +53,7 @@ Objeto fases.
 
 Método End\+Game. 
 
-Verifica se o jogador completou todas as campanhas e exibe o resultado final do jogo. \begin{DoxyReturn}{Returns}
+Verifica se o jogador zerou todas as campanhas, para gerar vitória ou não. \begin{DoxyReturn}{Returns}
 void. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classfases_a2f19632bd94eacd6c5437a2774bc529f}\label{classfases_a2f19632bd94eacd6c5437a2774bc529f}} 
@@ -106,6 +115,48 @@ Criação da campanha jogável com paladino, faz-\/se uso de ponteiros inteligen
 
 usa o auxílio da classe combate para determinar vencedor do confronto, em caso de vitória total, gera um arquivo com informações. \begin{DoxyReturn}{Returns}
 void. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfases_aedbb30c3e8ad0b50e96561029aecdf4a}\label{classfases_aedbb30c3e8ad0b50e96561029aecdf4a}} 
+\index{fases@{fases}!get\+End\+Game@{get\+End\+Game}}
+\index{get\+End\+Game@{get\+End\+Game}!fases@{fases}}
+\subsubsection{\texorpdfstring{get\+End\+Game()}{getEndGame()}}
+{\footnotesize\ttfamily bool fases\+::get\+End\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Método get End Game. 
+
+Retorna o fim de jogo como vencedor ou perdedor. \begin{DoxyReturn}{Returns}
+bool valor. 
+\end{DoxyReturn}
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classfases_a918b9b50f8716407ea46bdfbf5848271}\label{classfases_a918b9b50f8716407ea46bdfbf5848271}} 
+\index{fases@{fases}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!fases@{fases}}
+\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{o,  }\item[{\mbox{\hyperlink{classfases}{fases}} \&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Sobrecarga do operado $<$$<$. 
+
+Exibe os créditos do jogo. \begin{DoxyReturn}{Returns}
+o. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfases_a24bc7622c7828e59917da245c41920d8}\label{classfases_a24bc7622c7828e59917da245c41920d8}} 
+\index{fases@{fases}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!fases@{fases}}
+\subsubsection{\texorpdfstring{operator$>$$>$}{operator>>}}
+{\footnotesize\ttfamily istream\& operator$>$$>$ (\begin{DoxyParamCaption}\item[{istream \&}]{i,  }\item[{\mbox{\hyperlink{classfases}{fases}} \&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Sobrecarga do operado $>$$>$. 
+
+Recebe o nome do jogador completo. \begin{DoxyReturn}{Returns}
+i. 
 \end{DoxyReturn}
 
 

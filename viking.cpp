@@ -89,3 +89,17 @@ int viking::skillTres(int armFisica,int armRunica,int hp)
 		return this->Dano(armFisica);
 	}
 }
+/**
+	*@brief Método help.
+	*@details Informa ao jogador detalhes das skills.
+	*@return void.
+*/
+void viking::help()
+{
+	cout<<"Comandos básicos:"<<endl;
+	cout<<"1:Ataque básico!"<<endl;
+	cout<<"2:arremesso de machado(golpe fixo de baixo valor)!"<<endl;
+	cout<<"3:Investida selvagem(nessa skill o viking ser joga provocando dano a si e ao monstro)!"<<endl;
+	cout<<"4:Ragnarok(Se esse golpe acertar o monstro ele morre instantâneamente)"<<endl;
+	cout<<endl;
+}

@@ -25,6 +25,7 @@ void fases::faseUm()
 	b.push_back(make_shared<paladino>("Jorah"));
 	cout<<"Jorah um paladino que é sustentado pela fé na justiça e em seu deus, foi um dos primeiros guerreiros do rei a chegar em nidavelin,";
 	cout<<"lá ele se deparou com diversos monstros, porém não hesitou!"<<endl<<endl;
+	b[0]->help();
 	a.push_back(make_shared<esqueleto>());
 	a.push_back(make_shared<verdugo>());
 	a.push_back(make_shared<minotauro>());
@@ -53,11 +54,7 @@ void fases::faseUm()
 	{
 		ofstream outFile;
 		outFile.open("Jorah.dat");
-		outFile<<"A cripta leste está a 1 milha de distância do moinho de Nidavelir, se o senhor está lendo isso, minha missão foi cumprida!";
-	}
-	else
-	{
-		endGame=false;
+		outFile<<"13895/3645";
 	}
 	return ;
 }
@@ -80,6 +77,7 @@ void fases::faseDois()
 	a.push_back(make_shared<verdugo>());
 	a.push_back(make_shared<ghoul>());
 	a.push_back(make_shared<tycondrius>());
+	b[0]->help();
 	if(vivo)
 		vivo=combate<vector<shared_ptr<viking>>>(b,a,0);
 	if(vivo)
@@ -95,11 +93,7 @@ void fases::faseDois()
 	{
 		ofstream outFile;
 		outFile.open("Ragnar.dat");
-		outFile<<"A cripta Oeste está no cemitério de dojyuno, lembre-se da sua promessa!";
-	}
-	else
-	{
-		endGame=false;
+		outFile<<"148455/3775";
 	}
 	return ;
 }
@@ -121,6 +115,7 @@ void fases::faseTres()
 	a.push_back(make_shared<verdugo>());
 	a.push_back(make_shared<ghoul>());
 	a.push_back(make_shared<tycondrius>());
+	b[0]->help();
 	if(vivo)
 		vivo=combate<vector<shared_ptr<mago>>>(b,a,0);
 	if(vivo)
@@ -134,11 +129,7 @@ void fases::faseTres()
 	{
 		ofstream outFile;
 		outFile.open("Merlon.dat");
-		outFile<<"A cripta Norte está em frente a cachoeira de salatur, me desculpe Edmund, eu não voltei!";
-	}
-	else
-	{
-		endGame=false;
+		outFile<<"23355/9045";
 	}
 	return ;
 }
@@ -162,6 +153,7 @@ void fases::faseQuatro()
 	a.push_back(make_shared<verdugo>());
 	a.push_back(make_shared<verdugo>());
 	a.push_back(make_shared<tycondrius>());
+	b[0]->help();
 	if(vivo)
 		vivo=combate<vector<shared_ptr<assassino>>>(b,a,0);
 	if(vivo)
@@ -178,29 +170,104 @@ void fases::faseQuatro()
 	{
 		ofstream outFile;
 		outFile.open("Moham.dat");
-		outFile<<"A cripta Sul está no início do vale de kalit, liberte Sophie, esse é o meu último pedido!";
-	}
-	else
-	{
-		endGame=false;
+		outFile<<"22346/3647";
 	}
 	return ;
 }
 /**
 	*@brief Método EndGame.
-	*@details Verifica se o jogador completou todas as campanhas e exibe o resultado final do jogo.
+	*@details Verifica se o jogador zerou todas as campanhas, para gerar vitória ou não.
 	*@return void.
 */
 void fases::EndGame()
 {
-	if(endGame==false)
-	{
-		cout<<"Sem a localização das criptas o rei travou a guerra contra Tycondrius porém perdeu, a humanidade foi escravizada e os quatro ";
-		cout<<"guerreiros esquecidos"<<endl;
+	string aux;
+	ifstream infile;
+    infile.open("Jorah.dat"); 
+	if(infile.bad()) {
+		endGame=false;
+		exit(1);
 	}
 	else
 	{
-		cout<<"Graças a coragem dos quatro guerreiros o rei conseguiu mobilizar seu exército e derrubar a besta Tycondrius, os nomes deles ";
-		cout<<"foram gravados na história da humanidade!"<<endl;
+		while(!infile.eof())
+			getline(infile,aux,'\n');
+		cartas.push_back(aux);
 	}
+	infile.open("Ragnar.dat"); 
+	if(infile.bad()) {
+		endGame=false;
+		exit(1);
+	}
+	else
+	{
+		while(!infile.eof())
+			getline(infile,aux,'\n');
+		cartas.push_back(aux);
+	}
+	infile.open("Merlon.dat"); 
+	if(infile.bad()) {
+		endGame=false;
+		exit(1);
+	}
+	else
+	{
+		while(!infile.eof())
+			getline(infile,aux,'\n');
+		cartas.push_back(aux);
+	}
+	infile.open("Moham.dat"); 
+	if(infile.bad()) {
+		endGame=false;
+		exit(1);
+	}
+	else
+	{
+		while(!infile.eof())
+			getline(infile,aux,'\n');
+		cartas.push_back(aux);
+	}
+}
+/**
+	*@brief Sobrecarga do operado >>.
+	*@details Recebe o nome do jogador completo.
+	*@return i.
+*/
+istream& operator>> (istream &i, fases &t) {
+	cout<<"Digite seu nome:"<<endl;
+	getline(i,t.nome,'\n');
+	cout<<endl;
+	return i;
+}
+/**
+	*@brief Sobrecarga do operado <<.
+	*@details Exibe os créditos do jogo.
+	*@return o.
+*/
+ostream& operator<< (ostream &o, fases &t) 
+{
+	if(t.getEndGame()==true)
+	{
+		o<<"Graças a coragem dos quatro guerreiros o rei conseguiu mobilizar seu exército e derrubar a besta Tycondrius, os nomes deles "
+		 <<"foram gravados na história da humanidade!"<<endl
+		 <<"Obrigado pela sua contribuição, "<<t.nome<<"!"<<endl
+		 <<"Jogo desenvolvido pelo aluno da disciplina de linguagem de programação: Yan Carlos Rocha da Silva."<<endl;
+	}
+	else
+	{
+		o<<"Sem a localização das criptas o rei travou a guerra contra Tycondrius porém perdeu, a humanidade foi escravizada e os quatro "
+		 <<"guerreiros esquecidos"<<endl
+		 <<"Obrigado pela sua contribuição, "<<t.nome<<"!"<<endl
+		 <<"Jogo desenvolvido pelo aluno da disciplina de linguagem de programação: Yan Carlos Rocha da Silva."<<endl;	
+	}
+	return o;
+}
+/**
+	*@brief Método get End Game.
+	*@details Retorna o fim de jogo como vencedor ou perdedor.
+	*@return bool valor.
+*/
+bool fases::getEndGame()
+{
+	return endGame;
 }

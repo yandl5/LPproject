@@ -88,7 +88,7 @@ int assassino::skillTres(int armFisica,int armRunica,int hp)
 	if(this->getMAna()>=20&&ligadoEsquivaPerfeita==false)
 	{
 		cout<<"O assassino está invalvejável, sua energia está sendo consumida!"<<endl;
-		this->setEsquiv(100);
+		this->setEsquiv(80);
 		ligadoEsquivaPerfeita=true;
 		return 0;
 	}
@@ -132,4 +132,18 @@ void assassino::aplicarDebuffs()
 	{
 		this->debitarMAna(5);
 	}
+}
+/**
+	*@brief Método help.
+	*@details Informa ao jogador detalhes das skills.
+	*@return void.
+*/
+void assassino::help()
+{
+	cout<<"Comandos básicos:"<<endl;
+	cout<<"1:Ataque básico!"<<endl;
+	cout<<"2:Golpe duplo(golpe de baixo custo que dobra seu dano)!"<<endl;
+	cout<<"3:Encantar com veneno(Encanta a arma com veneno mágico a custo de mana contínua)!"<<endl;
+	cout<<"4:Passos da ilusão(aumenta consideravelmente sua esquiva a custa de gasto de mana contínua)!"<<endl;
+	cout<<endl;
 }

@@ -6,9 +6,11 @@
 class fases
 {
 private:
+	string nome;
 	vector<shared_ptr<monstro>> a;
 	bool vivo;
 	bool endGame;
+	vector<string> cartas;
 public:
 	fases();
 	~fases();
@@ -17,5 +19,8 @@ public:
 	void faseTres();
 	void faseQuatro();
 	void EndGame();
+	bool getEndGame();
+	friend istream& operator>> (istream &i, fases &t);
+	friend ostream& operator<< (ostream &o, fases &t);
 };
 #endif

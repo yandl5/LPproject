@@ -42,4 +42,4 @@ personagem.o	:	personagem.h
 main.o	:	combate.h
 	$(CC) $(CPPFLAGS) -c main.cpp
 clean:
-	rm -f core $(PROG)$(OBJS)
+	rm -f core $(PROG) $(OBJS)

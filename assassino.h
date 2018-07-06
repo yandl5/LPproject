@@ -15,5 +15,6 @@ public:
 	int skillDois(int armFisica,int armRunica,int hp);
 	int skillTres(int armFisica,int armRunica,int hp);
 	void aplicarDebuffs();
+	void help();
 };
 #endif

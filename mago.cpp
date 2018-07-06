@@ -17,6 +17,7 @@ int mago::controleAtaque(string valor,int armFisica,int armRunica,int hp)
 	if(valor=="1")
 	{
 		cout<<"Golpe simples de faísca!"<<endl;
+		dano=25;
 		dano=20;
 	}
 	if(valor=="2")
@@ -85,4 +86,18 @@ int mago::skillTres(int armFisica,int armRunica,int hp)
 	this->setMAna(y/2);
 	cout<<"O mago se envolve numa barreira espiritual que consome boa parte de sua energia"<<endl;
 	return 0;
+}
+/**
+	*@brief Método help.
+	*@details Informa ao jogador detalhes das skills.
+	*@return void.
+*/
+void mago::help()
+{
+	cout<<"Comandos básicos:"<<endl;
+	cout<<"1:Golpe fixo de relâmpago de baixo dano!"<<endl;
+	cout<<"2:Nevasca(golpe baseado na armadura mágica do alvo!)"<<endl;
+	cout<<"3:Inferno(skill de dano massiva, porém de alto custo!)"<<endl;
+	cout<<"4:barreira de mana(aumenta a vida do mago baseado na metade da sua mana, consome metade da mana!)"<<endl;
+	cout<<endl;
 }
