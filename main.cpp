@@ -33,8 +33,3 @@ int main()
 	cout<<endl;
 	return 0;
 }
-/**
-	*@brief 
-	*@details 
-	*@return 
-*/

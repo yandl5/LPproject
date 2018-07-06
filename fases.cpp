@@ -177,6 +177,7 @@ void fases::faseQuatro()
 /**
 	*@brief Método EndGame.
 	*@details Verifica se o jogador zerou todas as campanhas, para gerar vitória ou não.
+	*@details Verifica se o jogador completou todas as campanhas e exibe o resultado final do jogo.
 	*@return void.
 */
 void fases::EndGame()

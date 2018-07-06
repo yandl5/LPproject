@@ -36,10 +36,15 @@ var menudata={children:[
 {text:"e",url:"functions.html#index_e"},
 {text:"f",url:"functions.html#index_f"},
 {text:"g",url:"functions.html#index_g"},
+<<<<<<< HEAD
 {text:"h",url:"functions.html#index_h"},
 {text:"j",url:"functions.html#index_j"},
 {text:"m",url:"functions.html#index_m"},
 {text:"o",url:"functions.html#index_o"},
+=======
+{text:"j",url:"functions.html#index_j"},
+{text:"m",url:"functions.html#index_m"},
+>>>>>>> 0546f94c50e08ebf892bc8350edb40cb6ecd7634
 {text:"p",url:"functions.html#index_p"},
 {text:"r",url:"functions.html#index_r"},
 {text:"s",url:"functions.html#index_s"},
@@ -53,14 +58,21 @@ var menudata={children:[
 {text:"e",url:"functions_func.html#index_e"},
 {text:"f",url:"functions_func.html#index_f"},
 {text:"g",url:"functions_func.html#index_g"},
+<<<<<<< HEAD
 {text:"h",url:"functions_func.html#index_h"},
+=======
+>>>>>>> 0546f94c50e08ebf892bc8350edb40cb6ecd7634
 {text:"j",url:"functions_func.html#index_j"},
 {text:"m",url:"functions_func.html#index_m"},
 {text:"p",url:"functions_func.html#index_p"},
 {text:"r",url:"functions_func.html#index_r"},
 {text:"s",url:"functions_func.html#index_s"},
 {text:"t",url:"functions_func.html#index_t"},
+<<<<<<< HEAD
 {text:"v",url:"functions_func.html#index_v"}]},
 {text:"Related Functions",url:"functions_rela.html"}]}]},
+=======
+{text:"v",url:"functions_func.html#index_v"}]}]}]},
+>>>>>>> 0546f94c50e08ebf892bc8350edb40cb6ecd7634
 {text:"Files",url:"files.html",children:[
 {text:"File List",url:"files.html"}]}]}
