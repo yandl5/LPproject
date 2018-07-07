@@ -43,6 +43,7 @@ int assassino::skillUm(int armFisica,int armRunica,int hp)
 	if(this->getMAna()>=5)
 	{
 		cout<<"O assassino desfere dois golpes no mesmo movimento"<<endl;
+		this->debitarMAna(5);
 		return (this->Dano(armFisica)*2);
 	}
 	else
