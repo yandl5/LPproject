@@ -50,11 +50,9 @@ void fases::faseUm()
 		combate<vector<shared_ptr<paladino>>>(b,a,4);
 	}
 	a.clear();
-	if(vivo)
+	if(vivo==false)
 	{
-		ofstream outFile;
-		outFile.open("Jorah.dat");
-		outFile<<"13895/3645";
+		endGame=false;
 	}
 	return ;
 }
@@ -89,11 +87,9 @@ void fases::faseDois()
 	if(vivo)
 		combate<vector<shared_ptr<viking>>>(b,a,4);
 	a.clear();
-	if(vivo)
+	if(vivo==false)
 	{
-		ofstream outFile;
-		outFile.open("Ragnar.dat");
-		outFile<<"148455/3775";
+		endGame=false;
 	}
 	return ;
 }
@@ -125,11 +121,9 @@ void fases::faseTres()
 	if(vivo)
 		combate<vector<shared_ptr<mago>>>(b,a,3);
 	a.clear();
-	if(vivo)
+	if(vivo==false)
 	{
-		ofstream outFile;
-		outFile.open("Merlon.dat");
-		outFile<<"23355/9045";
+		endGame=false;
 	}
 	return ;
 }
@@ -166,11 +160,9 @@ void fases::faseQuatro()
 		combate<vector<shared_ptr<assassino>>>(b,a,3);
 	}
 	a.clear();
-	if(vivo)
+	if(vivo==false)
 	{
-		ofstream outFile;
-		outFile.open("Moham.dat");
-		outFile<<"22346/3647";
+		endGame=false;
 	}
 	return ;
 }
@@ -182,51 +174,21 @@ void fases::faseQuatro()
 */
 void fases::EndGame()
 {
-	string aux;
-	ifstream infile;
-    infile.open("Jorah.dat"); 
-	if(infile.bad()) {
-		endGame=false;
-		exit(1);
+	ofstream outFile;
+	if(endGame==false){
+		outFile.open("ReiTycondrius.dat");
+		outFile<<"Após a queda da humanidade Tycondrius reinou, sem esperança os sobreviventes só tinham as lembranças"
+		<<" rebruscadas da era dos heróis, o mundo se envolveu nas sombras, até que nas sombras uma esperança surgiu,"
+		<<" um garoto franzino que não conhecia nada a não ser as trevas, mas que tinha consigo o poder para libertar a humanidade"
+		<<" , o nome dele? Thanatos! Continua...";
 	}
 	else
 	{
-		while(!infile.eof())
-			getline(infile,aux,'\n');
-		cartas.push_back(aux);
-	}
-	infile.open("Ragnar.dat"); 
-	if(infile.bad()) {
-		endGame=false;
-		exit(1);
-	}
-	else
-	{
-		while(!infile.eof())
-			getline(infile,aux,'\n');
-		cartas.push_back(aux);
-	}
-	infile.open("Merlon.dat"); 
-	if(infile.bad()) {
-		endGame=false;
-		exit(1);
-	}
-	else
-	{
-		while(!infile.eof())
-			getline(infile,aux,'\n');
-		cartas.push_back(aux);
-	}
-	infile.open("Moham.dat"); 
-	if(infile.bad()) {
-		endGame=false;
-		exit(1);
-	}
-	else
-	{
-		while(!infile.eof())
-			getline(infile,aux,'\n');
-		cartas.push_back(aux);
+		outFile.open("DaQuedaDeTycondrius.dat");
+		outFile<<" Após destruir a besta Tycondrius, a humanidade passou por um período na qual não se reconhecia o mal, e já "
+		<<"dizia o ditado, tempos fáceis geram homens fracos, 30 anos se passaram, os ândalos da monstanha inimigos juramentados"
+		<<" do rei descobriram numa cripta antiga algo mais tenebroso que o próprio Tycondrius, resta ao agora rei Arthan descobrir do"
+		<<" que se trata esse novo perigo! Continua...";
 	}
 }
 /**
@@ -252,14 +214,16 @@ ostream& operator<< (ostream &o, fases &t)
 		o<<"Graças a coragem dos quatro guerreiros o rei conseguiu mobilizar seu exército e derrubar a besta Tycondrius, os nomes deles "
 		 <<"foram gravados na história da humanidade!"<<endl
 		 <<"Obrigado pela sua contribuição, "<<t.nome<<"!"<<endl
-		 <<"Jogo desenvolvido pelo aluno da disciplina de linguagem de programação: Yan Carlos Rocha da Silva."<<endl;
+		 <<"Jogo desenvolvido pelo aluno da disciplina de linguagem de programação: Yan Carlos Rocha da Silva."<<endl
+		 <<"Consulte o arquivo DaQuedaDeTycondrius.dat para saber mais sobre a história..."<<endl;
 	}
 	else
 	{
 		o<<"Sem a localização das criptas o rei travou a guerra contra Tycondrius porém perdeu, a humanidade foi escravizada e os quatro "
 		 <<"guerreiros esquecidos"<<endl
 		 <<"Obrigado pela sua contribuição, "<<t.nome<<"!"<<endl
-		 <<"Jogo desenvolvido pelo aluno da disciplina de linguagem de programação: Yan Carlos Rocha da Silva."<<endl;	
+		 <<"Jogo desenvolvido pelo aluno da disciplina de linguagem de programação: Yan Carlos Rocha da Silva."<<endl
+		 <<"As vezes até em meio a escuridão há uma esperança consulte o arquivo ReiTycondrius.dat e confira..."<<endl;	
 	}
 	return o;
 }
